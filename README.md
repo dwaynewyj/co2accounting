@@ -2,9 +2,9 @@ Copyright (C) 2023 - All Rights Reserved
 
 - You may not use, distribute and modify this code under the terms of the legal license.
 
-# SCOP3
+# CO2ACCOUNTING
 
-- Description: `co2accounting accounting software for carbon tax regulations and audits`.
+- Description: `Accounting software for carbon tax regulations and audits`.
 - Author: Nick Jang
 - Created: 202308010540
 
