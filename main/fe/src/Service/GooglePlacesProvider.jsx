@@ -1,6 +1,6 @@
 import * as React from "react";
 const placesContext = React.createContext();
-const placesAPIKey = "AIzaSyDoZ2zUUkM1pUS4FdAM2qZPYkHxcHgTKyg";
+const placesAPIKey = process.env.GOOGLE_API_KEY;
 const placesScriptId = "google-places-link";
 
 let google;

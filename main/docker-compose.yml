@@ -31,7 +31,6 @@ services:
       - 8000:8000
     environment:
       - NODE_ENV=dev
-      - GOOGLE_PLACES_API_KEY=AIzaSyDP-K6RS7raWY4mppCGLIOckmx68b4Jw_I
 
     volumes:
       - ./be:/be/
