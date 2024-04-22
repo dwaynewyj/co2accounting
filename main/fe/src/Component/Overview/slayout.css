@@ -1,0 +1,43 @@
+/* Tab Selected */
+.ant-menu-item-selected {
+  background: transparent linear-gradient(118deg, #4699cf 0%, #4673c4 100%) 0%
+    0% no-repeat padding-box !important;
+  /* background-color: #4690cd !important; */
+  /* color: white; */
+}
+
+/* Tab title  */
+.ant-menu-item .ant-menu-title-content {
+  font-size: 12px !important;
+  font-family: Montserrat;
+  font-weight: 900;
+  color: white;
+}
+
+/* Navigation title  */
+.ant-menu-submenu-title > .ant-menu-title-content {
+  font-size: 16px !important;
+  font-family: Montserrat;
+  font-weight: 900;
+  color: white;
+}
+
+/* Navigation Item  */
+.ant-menu .ant-menu-submenu-inline {
+  padding-bottom: 20px;
+}
+
+/* Menu Icon  */
+.ant-menu .ant-menu-submenu-title .ant-menu-item-icon {
+  font-size: 16px;
+}
+
+/* Sub menu Icon  */
+.ant-menu .ant-menu-item .ant-menu-item-icon {
+  font-size: 12px;
+}
+
+/* Collapse and expand button  */
+.ant-layout .ant-layout-sider-trigger {
+  position: relative;
+}

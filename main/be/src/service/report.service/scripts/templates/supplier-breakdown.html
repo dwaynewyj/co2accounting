@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Supplier Breakdown</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#app {
+				position: relative;
+				width: 2380px;
+				height: 3368px;
+				background-color: #ffffff;
+				z-index: -2;
+			}
+			#custom-line {
+				background-color: #9a9a9a;
+				position: absolute;
+				top: 456px;
+				left: 0;
+				width: 2380px;
+				height: 1px;
+			}
+
+			.supplier-table {
+				position: absolute;
+				top: 572px;
+				left: 80px;
+				width: 2220px;
+				border-collapse: seperate;
+				border-spacing: 0;
+				letter-spacing: 0;
+				line-height: normal;
+			}
+
+			.supplier-table th,
+			.supplier-table td {
+				height: 140px;
+				font-size: 40px;
+				text-align: left;
+				border-collapse: collapse;
+			}
+
+			.supplier-table td {
+				font-weight: 400;
+				padding: 1.5em 1em;
+				border-bottom: 2px solid #e0e0e0;
+			}
+
+			.supplier-table th {
+				font-weight: bold;
+				font-weight: 700;
+				font-size: 48px;
+				background-color: #fafafa;
+				white-space: nowrap;
+				padding: 5px 1em;
+			}
+
+			.supplier-table tr:last-child td {
+				border-bottom: none;
+			}
+
+			.supplier-table th:first-child {
+				border-top-left-radius: 1em;
+				border-bottom-left-radius: 1em;
+			}
+
+			supplier.table th:last-child {
+				border-top-right-radius: 1em;
+				border-bottom-right-radius: 1em;
+			}
+		</style>
+	</head>
+
+	<body style="font-family: 'Montserrat', sans-serif; font-weight: 400">
+		{% for supplier_page in supplier_breakdown.supplier_pages %}
+		<div id="app">
+			<div id="custom-line"></div>
+			<p
+				style="
+					position: absolute;
+					left: 120px;
+					top: 84px;
+					width: 1500px;
+					height: 98px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					font-size: 80px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #9a9a9a;
+				"
+			>
+				Top Contributors of Emissions
+			</p>
+			<p
+				style="
+					position: absolute;
+					left: 120px;
+					top: 180px;
+					height: 156px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					font-size: 128px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #4673c4;
+				"
+			>
+				Supplier Breakdown
+			</p>
+			<table class="supplier-table">
+				<thead>
+					<tr>
+						<th>Payee Name</th>
+						<th>kg CO2e</th>
+						<th>%</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for supplier in supplier_page %}
+					<tr>
+						<td>{{ supplier.name }}</td>
+						<td>{{ supplier.emission }}</td>
+						<td>{{ supplier.percentage }}%</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+			<div
+				style="
+					position: absolute;
+					left: 80px;
+					top: 2792px;
+					width: 2216px;
+					height: 360px;
+					background-color: #fafafa;
+					border-radius: 1.5em;
+					letter-spacing: 0;
+					line-height: normal;
+					font-size: 48px;
+					box-sizing: border-box;
+					padding: 35px;
+				"
+			>
+				<p style="font-weight: 700">Source Insight</p>
+				<span style="display: block; height: 15px"></span>
+				<p style="font-weight: 400">
+					Discover the primary sources of emissions among your suppliers. This
+					valuable insight empowers you to make informed decisions such as
+					exploring alternative suppliers or implementing carbon offset
+					strategies to reduce your carbon footprint effectively.
+				</p>
+			</div>
+			<img
+				src="{{assets_path}}/footer.png"
+				alt="Footer"
+				style="
+					position: absolute;
+					left: 120px;
+					top: 3268px;
+					width: 2138px;
+					height: 60px;
+				"
+			/>
+		</div>
+		{% if not loop.last %}
+		<div style="page-break-before: always"></div>
+		{% endif %} {% endfor %}
+	</body>
+</html>

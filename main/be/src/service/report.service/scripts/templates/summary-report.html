@@ -1,0 +1,2348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{client_org_name}}</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <!-- page one -->
+    <div
+      class="main__wrap"
+      style="width: 1000px; margin: 0 auto; page-break-after: always"
+    >
+      <!-- header -->
+      <table
+        style="width: 100%; border-collapse: collapse; padding-bottom: 10px"
+      >
+        <tr>
+          <td>
+            <p style="color: #999e9f; font-weight: 800; font-size: 20px">
+              GHG INVENTORY
+            </p>
+            <h2
+              style="
+                font-weight: 800;
+                color: #4688c8;
+                font-size: 44px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+              "
+            >
+              {{client_org_name}}
+            </h2>
+          </td>
+          <td
+            style="
+              text-align: end;
+              vertical-align: middle;
+              color: #999e9f;
+              font-size: 20px;
+            "
+          >
+            Reported on: {{date}}
+          </td>
+        </tr>
+      </table>
+
+      <!-- table part 1 -->
+      <div
+        style="
+          padding: 7px 20px;
+          margin-top: 10px;
+          background: #4688c8;
+          border-radius: 10px;
+        "
+      >
+        <p
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 1px;
+          "
+        >
+          SCOPE 1
+        </p>
+      </div>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        "
+      >
+        <tr style="font-size: 20px; color: #999e9f; font-weight: 600">
+          <th
+            style="
+              padding: 2px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 40%;
+              font-weight: 600;
+            "
+          >
+            Category
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CO2
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CH4
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            N2O
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            kg CO <sub>2e</sub>
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              width: 10%;
+              text-align: center;
+            "
+          >
+            %
+          </th>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Stationary Combustion
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{stationary_combustion_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{stationary_combustion_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{stationary_combustion_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{stationary_combustion_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{stationary_combustion_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Mobile Combustion
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{mobile_combustion_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{mobile_combustion_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{mobile_combustion_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{mobile_combustion_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{mobile_combustion_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Refrigerants
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{refrigerants_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{refrigerants_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{refrigerants_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{refrigerants_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{refrigerants_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #4688c8;
+            letter-spacing: 1px;
+          "
+        >
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              font-weight: 800;
+              color: #4688c8;
+            "
+          >
+            Total
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope1_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope1_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope1_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope1_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{scope1_co2e_kg_percent}}
+          </td>
+        </tr>
+      </table>
+
+      <!-- table part 2 -->
+      <div
+        style="
+          padding: 7px 20px;
+          margin-top: 10px;
+          background: #4688c8;
+          border-radius: 10px;
+        "
+      >
+        <p
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 1px;
+          "
+        >
+          SCOPE 2
+        </p>
+      </div>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        "
+      >
+        <tr style="font-size: 20px; color: #999e9f; font-weight: 600">
+          <th
+            style="
+              padding: 2px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 40%;
+              font-weight: 600;
+            "
+          >
+            Category
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CO2
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CH4
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            N2O
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            kg CO <sub>2e</sub>
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              width: 10%;
+              text-align: center;
+            "
+          >
+            %
+          </th>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Purchased Electricity
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_electrcity_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_electrcity_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_electrcity_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_electrcity_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{purchased_electrcity_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Purchased Heat
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_heat_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_heat_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_heat_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_heat_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{purchased_heat_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Purchased Cooling
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_cooling_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_cooling_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_cooling_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_cooling_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{purchased_cooling_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #4688c8;
+            letter-spacing: 1px;
+          "
+        >
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              font-weight: 800;
+              color: #4688c8;
+            "
+          >
+            Total
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope2_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope2_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope2_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope2_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{scope2_co2e_kg_percent}}
+          </td>
+        </tr>
+      </table>
+
+      <!-- table part 3 -->
+      <div
+        style="
+          padding: 7px 20px;
+          margin-top: 10px;
+          background: #4688c8;
+          border-radius: 10px;
+        "
+      >
+        <p
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 1px;
+          "
+        >
+          SCOPE 3
+        </p>
+      </div>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        "
+      >
+        <tr style="font-size: 20px; color: #999e9f; font-weight: 600">
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              text-align: center;
+              width: 0%;
+            "
+          ></th>
+          <th
+            style="
+              padding: 2px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px;
+              border-right: 1px solid #999e9f;
+              width: 40%;
+              font-weight: 600;
+            "
+          >
+            Category
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CO2
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            CH4
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            N2O
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              width: 15%;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            kg CO <sub>2e</sub>
+          </th>
+          <th
+            style="
+              padding: 2px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              width: 10%;
+              text-align: center;
+            "
+          >
+            %
+          </th>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            1
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Purchased Goods and Services
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_goods_services_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_goods_services_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_goods_services_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{purchased_goods_services_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{purchased_goods_services_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            2
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Capital Goods
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{capital_goods_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{capital_goods_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{capital_goods_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{capital_goods_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{capital_goods_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            3
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Fuel- and Energy-Related Activities
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{fuel_and_energy_activities_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{fuel_and_energy_activities_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{fuel_and_energy_activities_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{fuel_and_energy_activities_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{fuel_and_energy_activities_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            4
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Upstream Transportation and Distribution
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_t_and_d_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_t_and_d_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_t_and_d_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_t_and_d_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{upstream_t_and_d_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            5
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Waste Generated in Operations
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{waste_generated_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{waste_generated_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{waste_generated_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{waste_generated_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{waste_generated_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            6
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Business Travel
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{business_travel_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{business_travel_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{business_travel_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{business_travel_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{business_travel_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            7
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Employee Commuting
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{employee_commuting_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{employee_commuting_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{employee_commuting_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{employee_commuting_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{employee_commuting_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            8
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Upstream Leased Assets
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_leased_assets_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_leased_assets_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_leased_assets_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{upstream_leased_assets_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{upstream_leased_assets_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            9
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Downstream Transportation and Distribution
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_t_and_d_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_t_and_d_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_t_and_d_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_t_and_d_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{downstream_t_and_d_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            10
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Processing of Sold Products
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{processing_of_sold_products_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{processing_of_sold_products_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{processing_of_sold_products_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{processing_of_sold_products_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{processing_of_sold_products_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            11
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Use of Sold Products
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{use_of_sold_products_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{use_of_sold_products_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{use_of_sold_products_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{use_of_sold_products_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{use_of_sold_products_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            12
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            End-of-Life Treatment of Sold Products
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{eol_treatment_of_sold_products_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{eol_treatment_of_sold_products_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{eol_treatment_of_sold_products_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{eol_treatment_of_sold_products_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{eol_treatment_of_sold_products_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            13
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Downstream Leased Assets Products
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_leased_assets_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_leased_assets_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_leased_assets_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{downstream_leased_assets_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{downstream_leased_assets_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            14
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Franchises
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{franchises_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{franchises_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{franchises_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{franchises_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{franchises_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr style="font-size: 20px; color: #999e9f">
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            15
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+            "
+          >
+            Investments
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{investments_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{investments_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{investments_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{investments_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{investments_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #4688c8;
+            letter-spacing: 1px;
+          "
+        >
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+            "
+          ></td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+              font-weight: 800;
+              color: #4688c8;
+            "
+          >
+            Total
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope3_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope3_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope3_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{scope3_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          >
+            {{scope3_co2e_kg_percent}}
+          </td>
+        </tr>
+        <tr
+          style="
+            font-weight: 800;
+            font-size: 20px;
+            color: #4688c8;
+            letter-spacing: 1px;
+          "
+        >
+          <td
+            style="
+              font-size: 16px;
+              border-bottom: 1px solid #999e9f;
+              padding: 6px 3px;
+              text-align: center;
+            "
+          ></td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              text-align: start;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              padding-left: 5px;
+              border-right: 1px solid #999e9f;
+              font-weight: 800;
+              color: #4688c8;
+            "
+          >
+            Grand Total
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{total_co2_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{total_ch4_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{total_n2o_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              border-right: 1px solid #999e9f;
+              text-align: center;
+            "
+          >
+            {{total_co2e_kg}}
+          </td>
+          <td
+            style="
+              font-size: 16px;
+              padding: 5px;
+              border-bottom: 1px solid #999e9f;
+              padding: 5px 20px;
+              text-align: center;
+            "
+          ></td>
+        </tr>
+      </table>
+
+      <!-- footer -->
+      <table style="border-collapse: collapse; width: 100%; margin-top: 20px">
+        <tr>
+          <td>
+            <img
+              src="https://beamish-dasik-a1d44a.netlify.app/logo.png"
+              alt=""
+              style="width: 65px"
+            />
+          </td>
+          <td
+            style="
+              text-align: end;
+              vertical-align: middle;
+              color: #999e9f;
+              font-size: 20px;
+            "
+          >
+            climateaccounting.com
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

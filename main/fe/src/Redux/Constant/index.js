@@ -1,0 +1,9 @@
+export const ADD_ARTICLE = "ADD_ARTICLE";
+export const SET_PERMISSION = "SET_PERMISSION";
+export const SET_USER = "SET_USER";
+export const SET_TOKEN = "SET_TOKEN";
+export const SET_ACCESS_TOKEN = "SET_ACCESS_TOKEN";
+export const SET_REFRESH_TOKEN = "SET_REFRESH_TOKEN";
+export const SET_USER_TUTORIAL = "SET_USER_TUTORIAL";
+export const SET_USER_TUTORIAL_RENT = "SET_USER_TUTORIAL_RENT";
+export const RESET = "RESET";

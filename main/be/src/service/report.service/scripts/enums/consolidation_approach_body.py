@@ -1,0 +1,7 @@
+from enum import Enum
+
+
+class consolidation_approach_body(Enum):
+    EQUITY_SHARE = 'Our company defines its organizational boundaries for greenhouse gas emissions in accordance with the GHG Protocol, primarily based on equity share. This approach ensures that emissions associated with entities in which we hold a significant ownership or equity stake are included in our overall emissions calculations. This practice is particularly relevant for companies with substantial investments in subsidiaries or joint ventures, allowing us to comprehensively account for emissions across our organizational structure.'
+    FINANCIAL_CONTROL = 'Under the financial control method, our company defines its organizational boundaries for greenhouse gas emissions based on entities we have financial control over. This includes subsidiaries or other entities where we have a controlling financial interest. This approach allows us to comprehensively account for emissions associated with our financial holdings, ensuring a thorough assessment of our environmental impact.'
+    OPERATIONAL_CONTROL = 'Opting for the operational control method, our company defines its organizational boundaries for greenhouse gas emissions based on activities over which we have direct operational control. This includes facilities, processes, or operations that we manage directly. This approach allows us to thoroughly assess emissions within our immediate sphere of influence, providing a comprehensive understanding of our environmental impact.'

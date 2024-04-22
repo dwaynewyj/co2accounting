@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: fe
+    image: fe
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: ./fe/Dockerfile
+    restart: always
+    depends_on:
+      - server
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=dev
+    volumes:
+      - ./fe:/fe/
+      - /fe/node_modules
+
+  server:
+    container_name: be
+    image: be
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: ./be/Dockerfile
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      - NODE_ENV=dev
+      - GOOGLE_PLACES_API_KEY=AIzaSyDP-K6RS7raWY4mppCGLIOckmx68b4Jw_I
+
+    volumes:
+      - ./be:/be/
+      - /be/node_modules
+      - /be/node_modules/bcrypt/

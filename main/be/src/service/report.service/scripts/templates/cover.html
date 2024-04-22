@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greenhouse Gas Inventory Report</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#app {
+				position: relative;
+				width: 2380px;
+				height: 3368px;
+				background-color: #ffffff;
+				z-index: -2;
+			}
+			#background-image {
+				position: absolute;
+				width: 2380px;
+				height: 2843px;
+				background-image: url('{{assets_path}}/cover-background.png');
+				z-index: -1;
+			}
+			@media print {
+				#background-image {
+					background-image: url('{{assets_path}}/cover-background.png') !important;
+				}
+			}
+		</style>
+	</head>
+
+	<body style="font-family: 'Montserrat', sans-serif">
+		<div id="app">
+			<div id="background-image"></div>
+			<img
+				src="{{assets_path}}/scop3-logo.png"
+				alt="SCOP3 Logo"
+				style="
+					position: absolute;
+					left: 135px;
+					top: 464px;
+					width: 500px;
+					height: 124px;
+				"
+			/>
+			<p
+				style="
+					position: absolute;
+					left: 135px;
+					top: 636px;
+					height: 156px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					font-size: 128px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #4673c4;
+				"
+			>
+				{{client_name}}
+			</p>
+			<p
+				id="heading"
+				style="
+					position: absolute;
+					left: 120px;
+					top: 792px;
+					width: 1637px;
+					height: 438px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 200;
+					font-size: 180px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #636363;
+				"
+			>
+				Greenhouse Gas Inventory Report
+			</p>
+			<p
+				style="
+					position: absolute;
+					left: 135px;
+					top: 2004px;
+					height: 156px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					font-size: 128px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #a1a1a1;
+				"
+			>
+				{{cover.location_name}}
+			</p>
+			<p
+				style="
+					position: absolute;
+					left: 139px;
+					top: 2200px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 500;
+					font-size: 48px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #404040;
+				"
+			>
+				{{cover.address}}<br />
+				{{cover.city}}, {{cover.province}}<br />
+				{{cover.postal_code}} {{cover.country}}
+			</p>
+			<p
+				style="
+					position: absolute;
+					left: 120px;
+					top: 3268px;
+					width: 586px;
+					height: 59px;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 600;
+					font-size: 48px;
+					letter-spacing: 0;
+					line-height: normal;
+					color: #9c9c9c;
+				"
+			>
+				climateaccounting.com
+			</p>
+		</div>
+	</body>
+</html>
